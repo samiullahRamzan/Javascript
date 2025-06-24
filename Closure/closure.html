@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        // function init() {
+
+        //     let name = "Mozilla"; 
+        //     function displayName() {
+        //         console.log(name); 
+        //     }
+
+        //     displayName();
+        // } 
+
+        // init();
+
+        // Example of lexical scoping
+
+        function outer(){
+            let username = "John";
+            function inner() {
+                console.log("username in inner function",username);
+            }
+            inner();
+        }
+        outer();
+        console.log("username outside the function scope",username); // This will throw an error because username is not defined in this scope
+        
+
+        // Example of closure
+        function outer(){
+            let username = "John";
+            function inner() {
+                console.log("username in inner function",username);
+            }
+            return inner; // Returning the inner function creates a closure
+        }
+        outer();
+        console.log("username outside the function scope",username);
+    </script>
+</body>
+</html>
