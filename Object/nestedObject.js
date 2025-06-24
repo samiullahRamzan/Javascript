@@ -26,3 +26,18 @@ user.setUserName("Sami Khan");
 
 user.setUserEmail("sami336@gmail.com");
 console.log(user.email); // Output:
+
+// adding  a new method in object
+
+user.getUserDetails = function () {
+  return `Name: ${this.name}, Email: ${this.email}`;
+};
+
+console.log(user.getUserDetails()); // Output: Name: John Doe, Email:
+
+const values = Object.values(user);
+console.log(values); // Output: Array of values in the user object
+console.log(values.filter((value) => typeof value === "object")); // Output: Array of objects in the user object
+
+let { name: FullName } = user;
+console.log(FullName); // Output: John Doe
