@@ -1,3 +1,7 @@
+
+// O(n) time complexity with memoization
+// O(n) space complexity for the cache
+// This implementation uses a closure to maintain the cache for previously computed Fibonacci numbers.  
 function memoizedFibonacci(){
     const cache = {};
 
@@ -18,3 +22,8 @@ function memoizedFibonacci(){
         return cache[n] = fib(n-1) + fib(n-2);
     }
 }
+
+const fibonacci = memoizedFibonacci();
+//console.log(fibonacci(10)); // Output: 55
+//console.log(fibonacci(50)); // Output: 12586269025
+console.log(fibonacci(100)); // Output: 354224848179261915075

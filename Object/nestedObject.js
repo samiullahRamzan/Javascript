@@ -10,11 +10,11 @@ const user = {
     ],
   },
   setUserName: function (userName) {
-    console.log("here is this value", this);
+    //console.log("here is this value in set User name", this);
     this.userName = userName;
   },
   setUserEmail: (email) => {
-    console.log("here is this value", this);
+    console.log("here is this value in arrow function", this);
     this.email = email;
   },
 };
